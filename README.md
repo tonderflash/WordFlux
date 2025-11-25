@@ -176,3 +176,6 @@ El archivo `bitacora.txt` contiene el razonamiento detallado detrás de cada dec
 
 MIT
 
+
+
+

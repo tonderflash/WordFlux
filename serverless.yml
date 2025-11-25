@@ -1,0 +1,44 @@
+service: wordflux
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs24.x  # También puedes usar: nodejs20.x, nodejs22.x, nodejs18.x
+  region: us-east-1
+  stage: ${opt:stage, 'dev'}
+  memorySize: 512
+  timeout: 30
+  environment:
+    NODE_ENV: ${self:provider.stage}
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - logs:CreateLogGroup
+            - logs:CreateLogStream
+            - logs:PutLogEvents
+          Resource: '*'
+
+functions:
+  wordCounter:
+    handler: src/lambda.handler
+    description: Cuenta palabras en texto recibido desde API Gateway
+    events:
+      - http:
+          path: /count
+          method: post
+          cors: true
+      - http:
+          path: /count
+          method: options
+          cors: true
+
+plugins:
+  - serverless-offline
+
+custom:
+  serverless-offline:
+    httpPort: 3000
+

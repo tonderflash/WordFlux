@@ -3,7 +3,7 @@
                     Procesador de Archivos de Texto Grandes
 ================================================================================
 Fecha de inicio: 25 de Noviembre, 2025
-Autor: Desarrollador
+Autor: Israel G.
 ================================================================================
 
 ENTRADA #1 - ANÁLISIS INICIAL DEL PROBLEMA
