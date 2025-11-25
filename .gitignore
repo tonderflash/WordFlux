@@ -1,0 +1,21 @@
+# Archivos de datos grandes (libros descargados)
+data/*.txt
+
+# Mantener la carpeta pero ignorar el contenido
+!data/.gitkeep
+
+# Node modules (por si se agregan dependencias en el futuro)
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos temporales
+*.tmp
+*.temp
+

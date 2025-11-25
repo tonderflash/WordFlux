@@ -1,0 +1,25 @@
+{
+  "name": "wordflux",
+  "version": "1.0.0",
+  "description": "Procesador de archivos de texto grandes usando streams y worker threads para conteo eficiente de palabras",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "download": "node scripts/downloadBook.js",
+    "count": "node src/index.js",
+    "count:parallel": "node src/index.js --parallel"
+  },
+  "keywords": [
+    "streams",
+    "word-counter",
+    "worker-threads",
+    "large-files",
+    "text-processing"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
+
